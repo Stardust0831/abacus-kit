@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abacus-kit"
+version = "0.1.0"
+description = "Interactive terminal input generator for ABACUS"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["ase>=3.22", "pyparsing>=3.1", "textual>=1,<9"]
+
+[project.scripts]
+abacus-kit = "abacus_kit.__main__:main"
+abacus-input = "abacus_kit.__main__:main"
+
+[tool.setuptools]
+packages = ["abacus_kit"]
+
+[tool.setuptools.package-data]
+abacus_kit = ["*.json"]
